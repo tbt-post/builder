@@ -46,7 +46,7 @@ program
     .command('gen-module [folderName]')
     .description('Generation spec common file')
     .action((folderName) => {
-        require('../lib/command-actions/gen-module')(path.join(localRootPath, folderName))
+        require('../lib/command-actions/gen-module')(path.join(localRootPath, folderName ? folderName : ''))
     });
 
 
