@@ -5,8 +5,9 @@ const path = require('path');
 const args = process.argv.slice(2);
 const rootPath = path.resolve(__dirname, '../');
 
-process.env.rootPath = rootPath;
-process.env.rootName = rootPath;
+process.env.rootPath = path.resolve(rootPath);
+process.env.libPath = path.resolve(rootPath, 'lib');
+process.env.rootName = path.resolve(rootPath, 'tbt');
 
 program
     .usage('[command] [options] \n         Command without flags will be started in interactive mode.');
@@ -22,8 +23,7 @@ program
 
 
 program
-    .command('add-component <folderName> [fileName]')
-    .alias('add-module')
+    .command('add-module <folderName> [fileName]')
     .description('Add react component')
     .action((folderName, fileName) => {
         require('../lib/command-actions/add')(folderName, fileName)
