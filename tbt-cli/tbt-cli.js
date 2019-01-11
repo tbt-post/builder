@@ -39,14 +39,14 @@ program
     .command('add-module <folderName> [fileName]')
     .description('Add react module')
     .action((folderName, fileName) => {
-        require('../lib/command-actions/add-module')(path.join(localRootPath, folderName), fileName)
+        require('../lib/command-actions/add-module')(path.join(folderName), fileName)
     });
 
 program
     .command('gen-module [folderName]')
     .description('Generation spec common file')
     .action((folderName) => {
-        require('../lib/command-actions/gen-module')(path.join(localRootPath, folderName ? folderName : ''))
+        require('../lib/command-actions/gen-module')(path.join(folderName ? folderName : ''))
     });
 
 
