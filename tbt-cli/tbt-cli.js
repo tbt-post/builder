@@ -7,7 +7,7 @@ const rootPath = path.resolve(__dirname, '../');
 
 process.env.rootPath = path.resolve(rootPath);
 process.env.libPath = path.resolve(rootPath, 'lib');
-process.env.rootName = path.resolve(rootPath, 'tbt');
+process.env.rootName = 'tbt';
 
 program
     .usage('[command] [options] \n         Command without flags will be started in interactive mode.');
