@@ -10,7 +10,7 @@
     "deploy": "npm run git-commit && npm run git-push && npm run patch-release"
   },
   "bin": {
-    "tbt": "tbt-cli/tbt-cli.js"
+    "_tbt": "tbt-cli/tbt-cli.js"
   },
   "author": "",
   "license": "ISC",
