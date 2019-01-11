@@ -25,10 +25,19 @@ program
 
 program
     .command('add-module <folderName> [fileName]')
-    .description('Add react component')
+    .description('Add react module')
     .action((folderName, fileName) => {
-        require('../lib/command-actions/add')(folderName, fileName)
+        require('../lib/command-actions/add-module')(folderName, fileName)
     });
+
+program
+    .command('gen-module [folderName]')
+    .description('Generation spec common file')
+    .action((folderName) => {
+        require('../lib/command-actions/gen-module')(folderName)
+    });
+
+
 if (!args.length) {
     program.outputHelp();
 }
