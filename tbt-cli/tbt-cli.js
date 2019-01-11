@@ -6,6 +6,7 @@ const args = process.argv.slice(2);
 const rootPath = path.resolve(__dirname, '../');
 
 process.env.rootPath = rootPath;
+process.env.rootName = rootPath;
 
 program
     .usage('[command] [options] \n         Command without flags will be started in interactive mode.');
