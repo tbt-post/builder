@@ -5,9 +5,10 @@ const path = require('path');
 const args = process.argv.slice(2);
 const rootPath = path.resolve(__dirname, '../');
 
-process.env.rootPath = path.resolve(rootPath);
-process.env.libPath = path.resolve(rootPath, 'lib');
-process.env.rootName = path.resolve('./', 'tbt');
+process.env.globalPath = path.join(rootPath);
+process.env.libPath = path.join(rootPath, 'lib');
+process.env.localPath = path.join('./', 'tbt');
+
 
 program
     .usage('[command] [options] \n         Command without flags will be started in interactive mode.');
