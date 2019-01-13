@@ -6,7 +6,6 @@ const args = process.argv.slice(2);
 
 const rootPath = path.resolve(__dirname, '../');
 
-
 const globalPath = process.env.globalPath = path.join(rootPath);
 const libPath = process.env.libPath = path.join(rootPath, 'lib');
 const localPath = process.env.localPath = path.join('./', 'tbt');
