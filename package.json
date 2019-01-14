@@ -6,7 +6,7 @@
     "tbt": "node tbt-cli/tbt-cli.js",
     "patch-release": "npm version patch && npm publish",
     "git-commit": "git add -A . && git commit -a -m 'gh-pages update'",
-    "git-push": "git push origin master --force && git checkout master",
+    "git-push": "git pull && git push origin master --force && git checkout master",
     "deploy": "npm run git-commit && npm run git-push && npm run patch-release"
   },
   "bin": {
@@ -25,6 +25,7 @@
     "path": "^0.12.7",
     "react": "^16.7.0",
     "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
     "uuid": "^3.3.2"
   },
   "repository": {
