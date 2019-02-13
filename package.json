@@ -1,6 +1,6 @@
 {
   "name": "@voydevichb/builder",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "main": "index.js",
   "scripts": {
     "tbt": "node tbt-cli/tbt-cli.js",
